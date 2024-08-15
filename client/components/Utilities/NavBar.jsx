@@ -50,11 +50,33 @@ function NavBar() {
               <li>
                 <Link
                   className={`text-gray-500 transition hover:text-gray-500/75 ${
+                    isActive("/services") ? activeClass : ""
+                  }`}
+                  href={`/services`}
+                >
+                  Services
+                </Link>
+              </li>
+
+              <li>
+                <Link
+                  className={`text-gray-500 transition hover:text-gray-500/75 ${
                     isActive("/careers") ? activeClass : ""
                   }`}
                   href={`/careers`}
                 >
                   Careers
+                </Link>
+              </li>
+
+              <li>
+                <Link
+                  className={`text-gray-500 transition hover:text-gray-500/75 ${
+                    isActive("/contact") ? activeClass : ""
+                  }`}
+                  href={`/contact`}
+                >
+                  Contact Us
                 </Link>
               </li>
             </ul>
