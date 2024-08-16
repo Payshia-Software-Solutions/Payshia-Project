@@ -25,9 +25,8 @@ function NavBar() {
   return (
     <header className="bg-white sticky top-0 z-50 shadow-sm">
       <div
-        className={`mx-auto flex max-w-screen-xl items-center gap-8 px-4 sm:px-6 lg:px-8 transition-all duration-500 ${
-          isScrolled ? "h-16" : "h-16 lg:h-28"
-        }`}
+        className={`mx-auto flex max-w-screen-xl items-center gap-8 px-4 sm:px-6 lg:px-8 transition-all duration-500 ${isScrolled ? "h-16" : "h-16 lg:h-28"
+          }`}
       >
         <Link className="block font-bold text-2xl text-teal-600" href={`/`}>
           Payshia
@@ -38,9 +37,8 @@ function NavBar() {
             <ul className="flex items-center gap-6 text-sm">
               <li>
                 <Link
-                  className={`text-gray-500 transition hover:text-gray-500/75 ${
-                    isActive("/about") ? activeClass : ""
-                  }`}
+                  className={`text-gray-500 transition hover:text-gray-500/75 ${isActive("/about") ? activeClass : ""
+                    }`}
                   href={`/about`}
                 >
                   About
@@ -49,9 +47,8 @@ function NavBar() {
 
               <li>
                 <Link
-                  className={`text-gray-500 transition hover:text-gray-500/75 ${
-                    isActive("/services") ? activeClass : ""
-                  }`}
+                  className={`text-gray-500 transition hover:text-gray-500/75 ${isActive("/services") ? activeClass : ""
+                    }`}
                   href={`/services`}
                 >
                   Services
@@ -60,9 +57,8 @@ function NavBar() {
 
               <li>
                 <Link
-                  className={`text-gray-500 transition hover:text-gray-500/75 ${
-                    isActive("/careers") ? activeClass : ""
-                  }`}
+                  className={`text-gray-500 transition hover:text-gray-500/75 ${isActive("/careers") ? activeClass : ""
+                    }`}
                   href={`/careers`}
                 >
                   Careers
@@ -71,9 +67,8 @@ function NavBar() {
 
               <li>
                 <Link
-                  className={`text-gray-500 transition hover:text-gray-500/75 ${
-                    isActive("/contact") ? activeClass : ""
-                  }`}
+                  className={`text-gray-500 transition hover:text-gray-500/75 ${isActive("/contact") ? activeClass : ""
+                    }`}
                   href={`/contact`}
                 >
                   Contact Us
@@ -91,12 +86,14 @@ function NavBar() {
                 Login
               </a>
 
-              <a
-                className="hidden rounded-md bg-gray-100 px-5 py-2.5 text-sm font-medium text-teal-600 transition hover:text-teal-600/75 sm:block"
-                href="#"
+              <Link
+                className={`hidden rounded-md bg-gray-100 px-5 py-2.5 text-sm font-medium text-teal-600 transition hover:text-teal-600/75 sm:block ${isActive("/Register") ? activeClass : ""
+
+                  }`}
+                href={`/Register`}
               >
                 Register
-              </a>
+              </Link>
             </div>
 
             <button
@@ -125,15 +122,13 @@ function NavBar() {
 
       {/* Off-canvas menu */}
       <div
-        className={`fixed inset-0 z-40 bg-black/50 transition-opacity duration-300 ${
-          isMenuOpen ? "opacity-100" : "opacity-0 pointer-events-none"
-        }`}
+        className={`fixed inset-0 z-40 bg-black/50 transition-opacity duration-300 ${isMenuOpen ? "opacity-100" : "opacity-0 pointer-events-none"
+          }`}
         onClick={() => setIsMenuOpen(false)}
       >
         <div
-          className={`fixed top-0 right-0 h-full w-3/4 bg-white shadow-lg transition-transform duration-300 ${
-            isMenuOpen ? "translate-x-0" : "translate-x-full"
-          }`}
+          className={`fixed top-0 right-0 h-full w-3/4 bg-white shadow-lg transition-transform duration-300 ${isMenuOpen ? "translate-x-0" : "translate-x-full"
+            }`}
         >
           <button
             className="absolute top-4 right-4 text-gray-600"
@@ -159,9 +154,8 @@ function NavBar() {
             <ul className="flex flex-col gap-6 text-sm">
               <li>
                 <Link
-                  className={`text-gray-500 transition hover:text-gray-500/75 ${
-                    isActive("/local") ? activeClass : ""
-                  }`}
+                  className={`text-gray-500 transition hover:text-gray-500/75 ${isActive("/local") ? activeClass : ""
+                    }`}
                   href={`/local`}
                   onClick={() => setIsMenuOpen(false)}
                 >
@@ -171,9 +165,8 @@ function NavBar() {
 
               <li>
                 <Link
-                  className={`text-gray-500 transition hover:text-gray-500/75 ${
-                    isActive("/world") ? activeClass : ""
-                  }`}
+                  className={`text-gray-500 transition hover:text-gray-500/75 ${isActive("/world") ? activeClass : ""
+                    }`}
                   href={`/world`}
                   onClick={() => setIsMenuOpen(false)}
                 >
@@ -183,9 +176,8 @@ function NavBar() {
 
               <li>
                 <Link
-                  className={`text-gray-500 transition hover:text-gray-500/75 ${
-                    isActive("/political") ? activeClass : ""
-                  }`}
+                  className={`text-gray-500 transition hover:text-gray-500/75 ${isActive("/political") ? activeClass : ""
+                    }`}
                   href={`/political`}
                   onClick={() => setIsMenuOpen(false)}
                 >
@@ -195,9 +187,8 @@ function NavBar() {
 
               <li>
                 <Link
-                  className={`text-gray-500 transition hover:text-gray-500/75 ${
-                    isActive("/sports") ? activeClass : ""
-                  }`}
+                  className={`text-gray-500 transition hover:text-gray-500/75 ${isActive("/sports") ? activeClass : ""
+                    }`}
                   href={`/sports`}
                   onClick={() => setIsMenuOpen(false)}
                 >
@@ -207,9 +198,8 @@ function NavBar() {
 
               <li>
                 <Link
-                  className={`text-gray-500 transition hover:text-gray-500/75 ${
-                    isActive("/entertainment") ? activeClass : ""
-                  }`}
+                  className={`text-gray-500 transition hover:text-gray-500/75 ${isActive("/entertainment") ? activeClass : ""
+                    }`}
                   href={`/entertainment`}
                   onClick={() => setIsMenuOpen(false)}
                 >
@@ -219,9 +209,8 @@ function NavBar() {
 
               <li>
                 <Link
-                  className={`text-gray-500 transition hover:text-gray-500/75 ${
-                    isActive("/contact") ? activeClass : ""
-                  }`}
+                  className={`text-gray-500 transition hover:text-gray-500/75 ${isActive("/contact") ? activeClass : ""
+                    }`}
                   href={`/contact`}
                   onClick={() => setIsMenuOpen(false)}
                 >
